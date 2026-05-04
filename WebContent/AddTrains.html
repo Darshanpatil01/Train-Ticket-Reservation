@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Trains | Add Train</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1 class="hd">National Ticket Booking Spot</h1>
+        <nav class="nav-links">
+            <a href="AdminHome.html">Home</a>
+            <a href="adminviewtrainfwd">View Trains</a>
+            <a href="adminsearchtrainfwd">Search</a>
+            <a href="addtrainfwd" class="active">Add Train</a>
+            <a href="cancletrainfwd">Delete</a>
+            <a href="updatetrain">Update</a>
+            <a href="adminlogout" class="logout">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="main-header">
+        <h2>Add New Train</h2>
+        <p>Enter train details to add into the system</p>
+    </div>
+
+    <div class="form-card">
+
+        <form action="adminaddtrain" method="post">
+
+            <div class="input-group">
+                <label>Train Number</label>
+                <input type="text" name="trainno" placeholder="Enter Train Number" required>
+            </div>
+
+            <div class="input-group">
+                <label>Train Name</label>
+                <input type="text" name="trainname" placeholder="Enter Train Name" required>
+            </div>
+
+            <div class="input-group">
+                <label>From Station</label>
+                <input type="text" name="fromstation" placeholder="Enter Source Station" required>
+            </div>
+
+            <div class="input-group">
+                <label>To Station</label>
+                <input type="text" name="tostation" placeholder="Enter Destination Station" required>
+            </div>
+
+            <div class="input-group">
+                <label>Available Seats</label>
+                <input type="text" name="available" placeholder="Enter Available Seats" required>
+            </div>
+
+            <div class="input-group">
+                <label>Fare (INR)</label>
+                <input type="text" name="fare" placeholder="Enter Fare Amount" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Add Train</button>
+
+        </form>
+
+    </div>
+
+</main>
+
+</body>
+</html>

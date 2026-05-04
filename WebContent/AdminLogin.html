@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Trains | Admin Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1 class="hd">National Ticket Booking Spot</h1>
+        <nav class="nav-links">
+            <a href="UserLogin.html">User Login</a>
+            <a href="UserRegister.html">Register</a>
+            <a href="AdminLogin.html" class="active">Admin Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="main-header">
+        <h2>Administrator Access</h2>
+        <p>Login to manage the system</p>
+    </div>
+
+    <div class="form-card">
+
+        <form action="adminlogin" method="post">
+
+            <div class="input-group">
+                <label>Email ID</label>
+                <input type="email" name="uname" placeholder="Enter Admin Email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="pword" placeholder="Enter Password" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Login</button>
+
+        </form>
+
+        <p class="form-footer">
+            <a href="UserLogin.html">Login as User</a>
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+</html>

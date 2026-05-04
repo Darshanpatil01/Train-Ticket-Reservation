@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View Trains</title>
+<link rel="stylesheet" href="UserHome_Css.css">
+</head>
+
+<body>
+
+<header>
+    <h1 class="hd">National Ticket Booking Spot</h1>
+
+    <nav class="nav-bar">
+        <a href="userhome">Home</a>
+        <a href="userviewtrainfwd">View Trains</a>
+        <a href="trainbwstnfwd">Trains Between Stations</a>
+        <a href="bookingdetails">Ticket Booking History</a>
+        <a href="fareenqfwd">Fare Enquiry</a>
+        <a href="useravailfwd">Seat Availability</a>
+        <a href="usersearchtrain">Search By TrainNo</a>
+        <a href="userprofile">Profile</a>
+        <a href="userlogout">Logout</a>
+    </nav>
+</header>
+
+<main>
+
+    <h2 class="tab">Available Trains</h2>
+
+    <!-- This table will be filled from backend (Spring Boot / DB) -->
+    <table class="train-table">
+        <tr>
+            <th>Train No</th>
+            <th>Train Name</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+        </tr>
+
+        <!-- Example static row (replace with dynamic data later) -->
+        <tr>
+            <td>11001</td>
+            <td>Deccan Express</td>
+            <td>Mumbai</td>
+            <td>Pune</td>
+            <td>07:00</td>
+            <td>10:30</td>
+        </tr>
+
+    </table>
+
+</main>
+
+</body>
+</html>

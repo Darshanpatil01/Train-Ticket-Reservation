@@ -1,0 +1,73 @@
+package com.darshan.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Optional;
+
+import com.darshan.beans.TrainException;
+import com.darshan.constant.ResponseCode;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class ErrorHandlerServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+		PrintWriter pw = res.getWriter();
+		res.setContentType("text/html");
+
+		Throwable throwable = (Throwable) req.getAttribute("jakarta.servlet.error.exception");
+		Integer statusCode = (Integer) req.getAttribute("jakarta.servlet.error.status_code");
+		String servletName = (String) req.getAttribute("jakarta.servlet.error.servlet_name");
+		String requestUri = (String) req.getAttribute("jakarta.servlet.error.request_uri");
+
+		String errorMessage = ResponseCode.INTERNAL_SERVER_ERROR.getMessage();
+		String errorCode = ResponseCode.INTERNAL_SERVER_ERROR.name();
+
+		if (statusCode == null)
+			statusCode = 0;
+
+		Optional<ResponseCode> errorCodes = ResponseCode.getMessageByStatusCode(statusCode);
+		if (errorCodes.isPresent()) {
+			errorMessage = errorCodes.get().getMessage();
+			errorCode = errorCodes.get().name();
+		}
+
+		if (throwable != null && throwable instanceof TrainException) {
+			TrainException trainException = (TrainException) throwable;
+			errorMessage = trainException.getMessage();
+			statusCode = trainException.getStatusCode();
+			errorCode = trainException.getErrorCode();
+			trainException.printStackTrace();
+		} else if (throwable != null) {
+			errorMessage = throwable.getMessage();
+			errorCode = throwable.getLocalizedMessage();
+		}
+
+		System.out.println("======ERROR TRIGGERED========");
+		System.out.println("Servlet Name: " + servletName);
+		System.out.println("Request URI: " + requestUri);
+		System.out.println("Status Code: " + statusCode);
+		System.out.println("Error Code: " + errorCode);
+		System.out.println("Error Message: " + errorMessage);
+		System.out.println("=============================");
+
+		if (statusCode == 401) {
+			RequestDispatcher rd = req.getRequestDispatcher("UserLogin.html");
+			rd.include(req, res);
+			pw.println("<div class='tab'><p1 class='menu'>" + errorMessage + "</p1></div>");
+		} else {
+			RequestDispatcher rd = req.getRequestDispatcher("error.html");
+			rd.include(req, res);
+			pw.println("<div style='margin-top:20%; text-align:center;'>"
+					+ "<p class=\"menu\" style='color:red'>" + errorCode + "</p><br>"
+					+ "<p class=\"menu\">" + errorMessage + "</p>"
+					+ "</div>");
+		}
+	}
+}

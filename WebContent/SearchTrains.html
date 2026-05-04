@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Trains | Search Train</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1 class="hd">National Ticket Booking Spot</h1>
+        <nav class="nav-links">
+            <a href="userhome">Home</a>
+            <a href="userviewtrainfwd">View Trains</a>
+            <a href="trainbwstnfwd">Between Stations</a>
+            <a href="bookingdetails">History</a>
+            <a href="fareenqfwd">Fare</a>
+            <a href="useravailfwd">Availability</a>
+            <a href="usersearchtrain" class="active">Search</a>
+            <a href="userprofile">Profile</a>
+            <a href="userlogout" class="logout">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="main-header">
+        <h2>Search Train</h2>
+        <p>Enter train number to view details</p>
+    </div>
+
+    <div class="form-card">
+
+        <form action="searchtrainservlet" method="post">
+
+            <div class="input-group">
+                <label>Train Number</label>
+                <input type="text" name="trainnumber" placeholder="Enter Train Number" required>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Search Train
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+</body>
+</html>

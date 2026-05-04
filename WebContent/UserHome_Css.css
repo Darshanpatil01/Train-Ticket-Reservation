@@ -1,0 +1,153 @@
+/* ===== BASE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --white: #ffffff;
+    --dark: #0f172a;
+    --border: #e2e8f0;
+    --danger: #ef4444;
+    --success: #10b981;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    margin: 0;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--dark);
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.hd {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* NAVIGATION (IMPROVED) */
+.menu {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.menu a {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+/* ===== CARDS / FORMS ===== */
+.tab, .main {
+    background: var(--white);
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* STATUS BORDERS */
+.tab.red { border-top: 5px solid var(--danger); }
+.tab.green { border-top: 5px solid var(--success); }
+.tab.brown { border-top: 5px solid #64748b; }
+
+/* ===== INPUTS ===== */
+input, select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+}
+
+/* ===== BUTTONS ===== */
+input[type="submit"],
+button {
+    width: 90%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: var(--primary-hover);
+}
+
+/* ===== TABLE (UPGRADED) ===== */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #f1f5f9;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+/* hover effect */
+tr:hover {
+    background: #f9fafb;
+}
+
+/* ===== OPTIONAL BADGES (VERY USEFUL FOR PROJECTS) ===== */
+.badge-success {
+    background: var(--success);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.badge-danger {
+    background: var(--danger);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}

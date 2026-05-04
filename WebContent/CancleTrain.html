@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Trains | Delete Train</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1 class="hd">National Ticket Booking Spot</h1>
+        <nav class="nav-links">
+            <a href="AdminHome.html">Home</a>
+            <a href="adminviewtrainfwd">View Trains</a>
+            <a href="adminsearchtrainfwd">Search</a>
+            <a href="addtrainfwd">Add Train</a>
+            <a href="cancletrainfwd" class="active">Delete</a>
+            <a href="updatetrain">Update</a>
+            <a href="adminlogout" class="logout">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="main-header">
+        <h2>Delete Train</h2>
+        <p>Enter train number to remove it from the system</p>
+    </div>
+
+    <div class="form-card">
+
+        <form action="admincancletrain" method="post">
+
+            <div class="input-group">
+                <label>Train Number</label>
+                <input type="text" name="trainno" placeholder="Enter Train Number" required>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Delete Train
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+</body>
+</html>

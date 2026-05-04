@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Trains | User Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1 class="hd">National Ticket Booking Spot</h1>
+        <nav class="nav-links">
+            <a href="userhome">Home</a>
+            <a href="userviewtrainfwd">View Trains</a>
+            <a href="trainbwstnfwd">Between Stations</a>
+            <a href="bookingdetails">History</a>
+            <a href="fareenqfwd">Fare</a>
+            <a href="useravailfwd">Availability</a>
+            <a href="usersearchtrain">Search</a>
+            <a href="userprofile">Profile</a>
+            <a href="userlogout" class="logout">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="main-header">
+        <h2>User Login</h2>
+        <p>Login to access your account</p>
+    </div>
+
+    <div class="form-card">
+
+        <form action="userlogin" method="post">
+
+            <div class="input-group">
+                <label>Email ID</label>
+                <input type="email" name="uname" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="pword" placeholder="Enter password" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Login</button>
+
+        </form>
+
+        <div class="form-footer" style="margin-top: 15px;">
+            <p>New user? <a href="UserRegister.html">Create an account</a></p>
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>Contact: Shashi Raj</p>
+    <p>Email: <a href="mailto:thebittercode@gmail.com">thebittercode@gmail.com</a></p>
+    <p>Phone: 9876543210</p>
+</footer>
+
+</body>
+</html>

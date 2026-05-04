@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Trains | Fare Enquiry</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1 class="hd">National Ticket Booking Spot</h1>
+        <nav class="nav-links">
+            <a href="userhome">Home</a>
+            <a href="userviewtrainfwd">View Trains</a>
+            <a href="trainbwstnfwd">Between Stations</a>
+            <a href="bookingdetails">History</a>
+            <a href="fareenqfwd" class="active">Fare</a>
+            <a href="useravailfwd">Availability</a>
+            <a href="usersearchtrain">Search</a>
+            <a href="userprofile">Profile</a>
+            <a href="userlogout" class="logout">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="main-header">
+        <h2>Fare Enquiry</h2>
+        <p>Check fare between source and destination stations</p>
+    </div>
+
+    <div class="form-card">
+
+        <form action="fareenq" method="post">
+
+            <div class="input-group">
+                <label>From Station</label>
+                <input type="text" name="fromstation" placeholder="Enter source station" required>
+            </div>
+
+            <div class="input-group">
+                <label>To Station</label>
+                <input type="text" name="tostation" placeholder="Enter destination station" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Get Fare</button>
+
+        </form>
+
+    </div>
+
+</main>
+
+</body>
+</html>
