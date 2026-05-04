@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>E-Trains | Add Train</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -36,32 +36,32 @@
 
             <div class="input-group">
                 <label>Train Number</label>
-                <input type="text" name="trainno" placeholder="Enter Train Number" required>
+                <input type="text" name="trainno" required>
             </div>
 
             <div class="input-group">
                 <label>Train Name</label>
-                <input type="text" name="trainname" placeholder="Enter Train Name" required>
+                <input type="text" name="trainname" required>
             </div>
 
             <div class="input-group">
                 <label>From Station</label>
-                <input type="text" name="fromstation" placeholder="Enter Source Station" required>
+                <input type="text" name="fromstation" required>
             </div>
 
             <div class="input-group">
                 <label>To Station</label>
-                <input type="text" name="tostation" placeholder="Enter Destination Station" required>
+                <input type="text" name="tostation" required>
             </div>
 
             <div class="input-group">
                 <label>Available Seats</label>
-                <input type="text" name="available" placeholder="Enter Available Seats" required>
+                <input type="number" name="availableSeats" required>
             </div>
 
             <div class="input-group">
                 <label>Fare (INR)</label>
-                <input type="text" name="fare" placeholder="Enter Fare Amount" required>
+                <input type="number" name="fare" required>
             </div>
 
             <button type="submit" class="submit-btn">Add Train</button>
@@ -71,6 +71,10 @@
     </div>
 
 </main>
+
+<footer>
+    <p>© 2026 National Ticket Booking Spot</p>
+</footer>
 
 </body>
 </html>
